@@ -1,0 +1,19 @@
+.foto{
+    width: 200px;
+    height: 350px;
+}
+
+.jumbotron{
+    background: url("https://cdn.pixabay.com/photo/2015/06/02/12/59/narrative-794978_960_720.jpg") no-repeat center center;
+    background-size: 100% 300%;
+}
+/* 
+.container{
+    display: flex;
+    justify-content: center;
+    padding-top: 2vw;
+}
+
+.autos{
+    background-color: #343A40;
+}   */
