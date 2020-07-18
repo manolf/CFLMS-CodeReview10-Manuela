@@ -34,7 +34,7 @@ $result = mysqli_query($connect, $sql);
 while ($row = mysqli_fetch_assoc($result)) {
     $name = $row['name'];
 
-    echo "<h2 class='text-success'>Media of $name in our library: </h2>";
+    echo "<h2 class='text-success'>Media of <span class='text-warning'>$name</span> in our library: </h2>";
 }
 ?>
         
