@@ -48,11 +48,9 @@
                     $authorID = $row['authorID'];
 
                     //echo "<option> $row[authorID] $row['firstname'] | $row ['lastname']</option>";
-                    echo "<option value= $authorID name= 'authorID' class='form-control'> $firstname $surname - $authorID</option>";
+                    echo "<option value= $authorID name= 'authorID' class='form-control'> $firstname $surname ( $authorID)</option>";
                 }
                 echo "</select>";
-
-
 
                 ?>
                 <br>
@@ -74,8 +72,7 @@
                 <!-- <label for="publisherID">Publisher: </label> -->
                 <select name="publisherID">
                     <?php
-                    $sql2 = "SELECT * FROM publisher
-    inner join address on address.addressID = publisher.publisherID";
+                    $sql2 = "SELECT * FROM publisher";
                     $result2 = mysqli_query($connect, $sql2);
 
 
@@ -90,7 +87,7 @@
 
 
                         //echo "<option> $row[authorID] $row['firstname'] | $row ['lastname']</option>";
-                        echo "<option value= $publisherID name= 'publisherID' class='form-control'> $name - $street $zipcode $city $country, size: $size - $publisherID </option>";
+                        echo "<option value= $publisherID name= 'publisherID' class='form-control'> $name $street $zipcode $city $country, size: $size ($publisherID) </option>";
                     }
                     echo "</select>";
 

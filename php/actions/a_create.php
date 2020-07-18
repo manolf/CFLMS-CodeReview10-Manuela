@@ -15,7 +15,7 @@ if ($_POST) {
    $bookID = $_POST['bookID'];
 
 
-   $sql = "INSERT INTO medium (ISBN_EAN, title, image, description, publishDate, type, genre, authorID, publisherID) VALUES ($bookID', $title', '$image', '$description','$publishDate', '$type', '$genre', $authorID, $publisherID)";
+   $sql = "INSERT INTO medium (ISBN_EAN, title, image, description, publishDate, type, genre, authorID, publisherID) VALUES ($bookID, '$title', '$image', '$description','$publishDate', '$type', '$genre', $authorID, $publisherID)";
     if($connect->query($sql) === TRUE) {
        echo "<p>New Record Successfully Created</p>" ;
        echo "<a href='../create.php'><button type='button'>Back</button></a>";
