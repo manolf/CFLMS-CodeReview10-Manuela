@@ -63,7 +63,7 @@
 
 <div class="col mb-4 ">
 		<div class="card px-1 py-1 bg-light" >
-			<img src=<?= $image?>" class="card-img-top foto " style="height: 30vh"	>
+			<img src=<?= $image?>" class="card-img-top foto h-40"	>
 			<div class="card-body">
                 <h4 class="card-text"><?= $author?> <span  ></span></h4>
                 <h4 class="card-title text-success"><?= $title?></h4>
