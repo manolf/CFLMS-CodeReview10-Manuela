@@ -19,6 +19,7 @@
             <a class="btn btn-outline-success" href="createPublisher.php" role="button">Add Publisher</a>
         </div>
     </nav>
+
         <div class="jumbotron jumbotron-fluid bg-dark text-white">
             <div class="container">
                 <h1 class="display-4">Library</h1>
@@ -45,6 +46,8 @@
             $genre = $row['genre'];
             $publisher = $row['name'];
             $publisherID = $row['publisherID'];
+            $availability = $row['availability'];
+
 
     //https://stackoverflow.com/questions/4258557/limit-text-length-in-php-and-provide-read-more-link
     $string = strip_tags($string);
@@ -56,25 +59,29 @@
 
     //if the string doesn't contain any space then it will cut without word basis.
     $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
-    $string .= '... <a href="/this/story">Read More</a>';
+    $string .= '... <a href="readmore.php?text='.$row['description'].' ">read more</a>';
+   // & 'title='.$title.'
+    
 }
 //echo $string;
+// title='. $title & 'author= '. $author &'bookID='. $bookID .'
             ?>
 
 <div class="col mb-4 ">
 		<div class="card px-1 py-1 bg-light" >
-			<img src=<?= $image?>" class="card-img-top foto h-40"	>
+            <img src=<?= $image?>" class="card-img-top foto h-40"	>
 			<div class="card-body">
                 <h4 class="card-text"><?= $author?> <span  ></span></h4>
                 <h4 class="card-title text-success"><?= $title?></h4>
                 <h4 class="card-text"><?= $genre?></h4>
                 <h6 class = "card-text">published <?= $publishDate?> </></h6>
-                <a href="publisherinfo.php?publisher_id=<?= $publisherID?>" class="card-text"><?= $publisher?></a>
-                
+                <a href="publisherinfo.php?publisher_id=<?= $publisherID?>" class="card-text"><?= $publisher?></a> | 
+                <a href="showmore.php?title=<?= $title?>&author=<?= $author?>&genre=<?= $genre?>&publishDate=<?= $publishDate?>&publisher=<?= $publisher?>&availability=<?= $availability?>&image=<?= $image?>&type=<?= $type?>&bookID=<?= $bookID?>&description=<?= $row['description']?>">Show more</a>
 			</div>
 			<div class="card-footer text-center">
 				<span class="">
-					<p> <?= $string?></p>
+                    <p> <?= $string?></p>
+                    
                 </span>
 				<a href="delete.php?book_id=<?= $bookID?>" class="btn btn-outline-danger  mx-auto">Delete medium</a>
 				<a href="update.php?book_id=<?= $bookID?>" class="btn btn-outline-success mx-auto">Update medium</a>

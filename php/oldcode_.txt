@@ -1,0 +1,119 @@
+            <!-- <form action="actions/a_update.php" method="post">
+                <table cellspacing="0" cellpadding="0">
+
+                    <tr>
+                        <th>Title</th>
+                        <td><input type="text" name="title" placeholder="title" value="<?php echo $data['title'] ?>" /></td>
+                    </tr>
+                    <tr>
+                        <th>Author</th>
+                        <td>
+                            <input type="text" name="surname" placeholder="surname" value="<?php echo $data['surname'] ?>" />
+                            <input type="text" name="firstname" placeholder="firstname" value="<?php echo $data['firstname'] ?>" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>description</th>
+                        <td><input type="text" name="description" rows="10" placeholder="description" value="<?php echo $data['description'] ?>" /></td>
+                    </tr>
+                    <tr>
+                        <th>image</th>
+                        <td><input type="text" name="image" placeholder="image" value="<?php echo $data['image'] ?>" /></td>
+                    </tr>
+                    <tr>
+                        <th>Publish Date</th>
+                        <td><input type="text" name="publishDate" placeholder="publishDate" value="<?php echo $data['publishDate'] ?>" /></td>
+                    </tr>
+                    <tr>
+                        <th>Publisher</th>
+                        <td><input type="text" name="publisher" placeholder="publisher" value="<?php echo $data['name'] ?>" /></td>
+                    </tr>
+                    <tr>
+                        <th>Genre</th>
+                        <td><input type="text" name="genre" placeholder="genre" value="<?php echo $data['genre'] ?>" /></td>
+                    </tr>
+                    <tr>
+                        <input type="hidden" name="book_id" value="<?php echo $data['ISBN_EAN'] ?>" />
+                        <input type="hidden" name="author_id" value="<?php echo $data['authorID'] ?>" />
+                        <input type="hidden" name="publisher_id" value="<?php echo $data['publisherID'] ?>" />
+                        <td><button type="submit">Save Changes</button></td>
+                        <td><a href="index.php"><button type="button">Back</button></a></td>
+                    </tr>
+                </table>
+            </form> -->
+
+
+
+
+            <div class="form-group">
+
+<!-- https://stackoverflow.com/questions/18733545/selected-value-get-from-db-into-dropdown-select-box-option-using-php-mysql-error -->
+
+<input type="text" name="firstname" value="<?php echo '$firstname' ?>" readonly="readonly" />
+
+
+    <label for="firstname">Author Firstname: </label>
+    <input type="text" class="form-control" name="firstname" placeholder="author firstname"/>
+    <label for="surname">Author Surname: </label>
+    <input type="text" class="form-control" name="surname"  />
+
+    <label for="title">Title: </label>
+    <input type="text" class="form-control" name="title" placeholder="title" rows="2"  />
+
+    <label for="image">Image: </label>
+    <input type="text" class="form-control" name="imagepath" placeholder="image"  />
+
+    <label for="genre">Genre: </label>
+    <input type="text" class="form-control" name="genre" placeholder="genre"  />
+
+    <label for="type">Type: </label>
+    <input type="text" class="form-control" name="type" placeholder="type"  />
+
+    <label for="publishDate">Publish Date: </label>
+    <input type="text" class="form-control" name="publishDate" placeholder="publishDate" />
+
+    <label for="publisher">Publisher: </label>
+    <input type="text" class="form-control" name="publisher" placeholder="publisher"  />
+
+    <label for="description">Description: </label>
+    <input type="text" class="form-control" name="description" rows="6"  />
+<!-- 
+    <input type="hidden" name="book_id" value="<?php echo $data['ISBN_EAN'] ?>" />
+    <input type="hidden" name="author_id" value="<?php echo $data['authorID'] ?>" />
+    <input type="hidden" name="publisher_id" value="<?php echo $data['publisherID'] ?>" /> -->
+
+    <input class="form-control btn btn-outline-success mt-3 mb-3" type="submit" name="submit" value= "Insert Medium" />
+
+    <a href="index.php" class="btn btn-block btn-outline-warning">Back</a>
+
+</div>
+
+    <!-- <input type="hidden" name="book_id" value="<?php echo $data['ISBN_EAN'] ?>" />
+    <input type="hidden" name="author_id" value="<?php echo $data['authorID'] ?>" />
+    <input type="hidden" name="publisher_id" value="<?php echo $data['publisherID'] ?>" />  -->
+
+
+
+
+
+
+
+
+        //shcöner ausgang:
+
+            <label for="title">Title: </label>
+    <input type="text" class="form-control" name="title" placeholder="title" rows="2"  />
+
+    <label for="author">Author</label>
+    <select>
+                        <option value=<?= $authorID?>><?= $firstname?><?= $surname?> </option>
+                        <option value=1>Martha Haven </option>
+                        <option value=2>Roberto Blanco </option>
+                        <option value=3>Hias </option>
+
+
+    </select>
+
+     <!-- <option value=<?= $authorID?>><?= $firstname?><?= $surname?> </option> -->
+
+     <option value=<?= $authorID?>><?= $firstname?><?= $surname?> </option>        

@@ -1,6 +1,15 @@
 body {
   font-family: "Roboto", sans-serif; }
 
+h1{
+    color: red;
+  }
+
+.foto{
+ width: 50%;
+ height: 50%;
+}
+
 .parallax_section1 {
   height: 100px;
   background-repeat: no-repeat;
@@ -10,7 +19,7 @@ body {
   position: relative; }
 
 .parallax_section2 {
-  min-height: 250px;
+  min-height: 150px;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -18,12 +27,12 @@ body {
   position: relative; }
 
 .parallax_image {
-  background-image: url(../img/parallax.jpg); }
+  background-image: url(img/parallax.jpg); }
 
 .row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around; }
+  justify-content: center; }
 
 .card:hover {
   transform: scale(1.05); }
@@ -32,6 +41,8 @@ body {
   margin: 20px 10px 20px 10px;
   padding: 20px 20px 20px 20px;
   transition: all 0.5s;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8); }
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8); 
+  width: 50%;
+}
 
 /*# sourceMappingURL=styles1.css.map */
